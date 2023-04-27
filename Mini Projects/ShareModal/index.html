@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="circle1"></div>
+        <div class="circle2"></div>
+        <!-- card-wrapper -->
+        <div class="card-wrapper">
+            <!-- picture -->
+            <div class="user-img">
+                <img src="./SayakBgWhite.jpg" alt="Sayak" height="248px" width="248px" >
+            </div>
+            <!-- name -->
+            <div class="user-name">
+                <h2>Sayak Maity</h2></div>
+            <!-- sub-heading -->
+            <div class="designation">
+                <h3>Full Stack Web Developer</h3></div>
+            <!-- modalbutton -->
+            <div class="bottom-group">
+                <button onclick="openModal()" class="btn-share btn-card"> 
+                    <i class="fa-solid fa-share"></i>
+                    <div>Share My Profile</div>
+                </button>
+                <button class="btn-follow btn-card">
+                    <div >Follow Me</div>
+                </button>
+            </div>
+        </div>        
+    </div>
+    <!-- modal -->
+    <div class="modal">
+        <div class="modal-header">
+            <h1>Share My Profile</h1>
+            <div><i onclick="closeModal()" class="fa-solid fa-xmark"></i></div>
+        </div>
+
+        <h3>Share this via</h3>
+
+        <div class="icon-container">
+            <a href="https://www.facebook.com/sayak.maity.9003/" target="_blank" class="icon" id="facebook">
+                <i class="fa-brands fa-facebook-f"></i>
+              </a>
+              <a href="#" target="_blank" class="icon" id="twitter">
+                <i class="fa-brands fa-twitter"></i>
+              </a>
+              <a href="https://www.instagram.com/s_y_a_k_maity/"  target="_blank" class="icon" id="instagram">
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+              <a href="#" target="_blank" class="icon" id="whatsapp">
+                <i class="fa-brands fa-whatsapp"></i>
+              </a>
+              <a href="https://www.linkedin.com/in/sayak-maity/" target="_blank" class="icon" id="linkedin">
+                <i class="fa fa-linkedin"></i>
+              </a>
+        </div>
+    </div>
+    <div class="overlay" onclick="closeModal()"></div>
+    <script src="https://kit.fontawesome.com/58a810656e.js" crossorigin="anonymous"></script>
+    <script src="scriptModal.js"></script>
+</body>
+</html>
