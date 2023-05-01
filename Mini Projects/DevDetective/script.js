@@ -59,16 +59,29 @@ btnmode.addEventListener("click", function () {
 // Functions
 
 //API CALL
-function getUserData(gitUrl) {
-  fetch(gitUrl)
-    .then((response) => response.json())
-    .then((data) => {
-      console.log(data);
-      updateProfile(data);
-    })
-    .catch((error) => {
-      throw error;
-    });
+// function getUserData(gitUrl) {
+//   fetch(gitUrl)
+//     .then((response) => response.json())
+//     .then((data) => {
+//       console.log(data);
+//       updateProfile(data);
+//     })
+//     .catch((error) => {
+//       throw error;
+//     });
+// }
+
+async function getUserData(gitUrl) {
+  try {
+    let response = await fetch(gitUrl);
+    let data = await response.json();
+    console.log(data);
+    updateProfile(data);
+  }
+  catch (err) {
+    console.log(err);
+    throw err;
+  }
 }
 
 //RENDER
